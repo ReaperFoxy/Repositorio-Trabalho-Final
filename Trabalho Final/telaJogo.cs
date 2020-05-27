@@ -22,7 +22,7 @@ namespace Trabalho_Final
         {
             Close();
         }
-
+        
         //MouseDown
         private void Peca1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -42,8 +42,8 @@ namespace Trabalho_Final
 
         //DragEnter
         private void ControlaEfeito(DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(typeof(System.Windows.Forms.Panel)))
+        {            
+            if (e.Data.GetDataPresent(typeof(Panel)))
                 e.Effect = DragDropEffects.Move;
             else
                 e.Effect = DragDropEffects.None;
@@ -52,27 +52,52 @@ namespace Trabalho_Final
 
         private void pnl1_DragEnter(object sender, DragEventArgs e)
         {
-            this.ControlaEfeito(e);
+            if (panel7.Contains(peca1))
+                e.Effect = DragDropEffects.None;
+            else if (panel4.Contains(peca1))
+                e.Effect = DragDropEffects.None;
+            //Lembrar limitar o 3
+            else
+                this.ControlaEfeito(e);
         }
         private void pnl2_DragEnter(object sender, DragEventArgs e)
         {
-            this.ControlaEfeito(e);
+            if (panel8.Contains(peca1))
+                e.Effect = DragDropEffects.None;
+            else if (panel5.Contains(peca1))
+                e.Effect = DragDropEffects.None;
+            else
+                this.ControlaEfeito(e);
         }
         private void pnl3_DragEnter(object sender, DragEventArgs e)
         {
-            this.ControlaEfeito(e);
+            if (panel9.Contains(peca1))
+                e.Effect = DragDropEffects.None;
+            else if (panel6.Contains(peca1))
+                e.Effect = DragDropEffects.None;
+            else
+                this.ControlaEfeito(e);
         }
         private void pnl4_DragEnter(object sender, DragEventArgs e)
         {
-            this.ControlaEfeito(e);
+            if (panel7.Contains(peca1))
+                e.Effect = DragDropEffects.None;
+            else
+                this.ControlaEfeito(e);
         }
         private void pnl5_DragEnter(object sender, DragEventArgs e)
         {
-            this.ControlaEfeito(e);
+            if (panel8.Contains(peca1))
+                e.Effect = DragDropEffects.None;
+            else
+                this.ControlaEfeito(e);
         }
         private void pnl6_DragEnter(object sender, DragEventArgs e)
         {
-            this.ControlaEfeito(e);
+            if (panel9.Contains(peca1))
+                e.Effect = DragDropEffects.None;
+            else
+                this.ControlaEfeito(e);
         }
         private void pnl7_DragEnter(object sender, DragEventArgs e)
         {
@@ -92,35 +117,79 @@ namespace Trabalho_Final
         {
             this.panel1.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
 
-            /* Control c1 = this.tableLayoutPanel1.GetControlFromPosition(0, 0);
-             Control c2 = this.tableLayoutPanel1.GetControlFromPosition(1, 1);
-            ChecarVazio(c1,c2,1);*/
+            //Gravidade
+            if (panel4.Contains(peca2) == false)
+                this.panel4.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+            if (panel7.Contains(peca2) == false && panel7.Contains(peca3) == false)
+                this.panel7.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+            if (panel7.Contains(peca3) == true && panel4.Contains(peca2) == true)
+                this.panel1.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+            if (panel7.Contains(peca3) == true && panel1.Contains(peca2) == true)
+                this.panel4.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+
+            //Condição Maior/Menor
+            //Se sobrepor peça maior -> cancelar ação
+            if (panel7.Contains(peca1))
+                e.Effect = DragDropEffects.None;
 
         }
         private void pnl2_DragDrop(object sender, DragEventArgs e)
         {
             this.panel2.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
-            
+
+            //Gravidade
+            if (panel5.Contains(peca2) == false)
+                this.panel5.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+            if (panel8.Contains(peca2) == false && panel8.Contains(peca3) == false)
+                this.panel8.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+            if (panel8.Contains(peca3) == true && panel5.Contains(peca2) == true)
+                this.panel2.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+            if (panel8.Contains(peca3) == true && panel2.Contains(peca2) == true)
+                this.panel5.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+
+
         }
         private void pnl3_DragDrop(object sender, DragEventArgs e)
         {
             this.panel3.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
-            
+
+            //Gravidade
+            if (panel6.Contains(peca2) == false)
+                this.panel6.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+            if (panel9.Contains(peca2) == false && panel9.Contains(peca3) == false)
+                this.panel9.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+            if (panel9.Contains(peca3) == true && panel6.Contains(peca2) == true)
+                this.panel3.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+            if (panel9.Contains(peca3) == true && panel3.Contains(peca2) == true)
+                this.panel6.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+
+            ChecarVitoria();
         }
         private void pnl4_DragDrop(object sender, DragEventArgs e)
         {
             this.panel4.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
-            
+
+            //Gravidade
+            if (panel7.Contains(peca3) == false && panel7.Contains(peca2) == false)
+                this.panel7.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+
         }
         private void pnl5_DragDrop(object sender, DragEventArgs e)
         {
             this.panel5.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
-          
+
+            //Gravidade
+            if (panel8.Contains(peca3) == false && panel8.Contains(peca2) == false)
+                this.panel8.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+
         }
         private void pnl6_DragDrop(object sender, DragEventArgs e)
         {
             this.panel6.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
-           
+
+            //Gravidade
+            if (panel9.Contains(peca3) == false && panel9.Contains(peca2) == false)
+                this.panel9.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
         }
         private void pnl7_DragDrop(object sender, DragEventArgs e)
         {
@@ -139,17 +208,18 @@ namespace Trabalho_Final
         }
 
 
-        //Gravidade
-       /* public void ChecarVazio(Control c1, Control c2, int linha)
+        //Vitoria
+        private void ChecarVitoria()
         {
-
-            if (c2.Controls != null)
+            if (panel3.Contains(peca1) && panel6.Contains(peca2) && panel9.Contains(peca3))
             {
-                this.tableLayoutPanel1.SetRow(c1, linha);
+                //Lembrar colocar premios
+                MessageBox.Show("Parabéns! Você ganhou!!");
+
             }
-           
-        }*/
 
+        }
 
+        
     }
 }

@@ -36,7 +36,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.peca3 = new System.Windows.Forms.Panel();
-            this.Peça3 = new System.Windows.Forms.Label();
+            this.LBPeça3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -44,7 +44,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.peca2 = new System.Windows.Forms.Panel();
-            this.Peça2 = new System.Windows.Forms.Label();
+            this.LBPeça2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -52,7 +52,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.peca1 = new System.Windows.Forms.Panel();
-            this.Peça1 = new System.Windows.Forms.Label();
+            this.LBPeça1 = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -172,7 +172,7 @@
             this.peca3.AllowDrop = true;
             this.peca3.BackColor = System.Drawing.SystemColors.Control;
             this.peca3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.peca3.Controls.Add(this.Peça3);
+            this.peca3.Controls.Add(this.LBPeça3);
             this.peca3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.peca3.Location = new System.Drawing.Point(0, 0);
             this.peca3.Name = "peca3";
@@ -180,15 +180,15 @@
             this.peca3.TabIndex = 9;
             this.peca3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Peca3_MouseDown);
             // 
-            // Peça3
+            // LBPeça3
             // 
-            this.Peça3.AutoSize = true;
-            this.Peça3.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Peça3.Location = new System.Drawing.Point(44, 20);
-            this.Peça3.Name = "Peça3";
-            this.Peça3.Size = new System.Drawing.Size(68, 73);
-            this.Peça3.TabIndex = 0;
-            this.Peça3.Text = "3";
+            this.LBPeça3.AutoSize = true;
+            this.LBPeça3.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBPeça3.Location = new System.Drawing.Point(44, 20);
+            this.LBPeça3.Name = "LBPeça3";
+            this.LBPeça3.Size = new System.Drawing.Size(68, 73);
+            this.LBPeça3.TabIndex = 0;
+            this.LBPeça3.Text = "3";
             // 
             // panel6
             // 
@@ -259,7 +259,7 @@
             this.peca2.AllowDrop = true;
             this.peca2.BackColor = System.Drawing.SystemColors.Control;
             this.peca2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.peca2.Controls.Add(this.Peça2);
+            this.peca2.Controls.Add(this.LBPeça2);
             this.peca2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.peca2.Location = new System.Drawing.Point(0, 0);
             this.peca2.Name = "peca2";
@@ -267,15 +267,15 @@
             this.peca2.TabIndex = 10;
             this.peca2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Peca2_MouseDown);
             // 
-            // Peça2
+            // LBPeça2
             // 
-            this.Peça2.AutoSize = true;
-            this.Peça2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Peça2.Location = new System.Drawing.Point(44, 20);
-            this.Peça2.Name = "Peça2";
-            this.Peça2.Size = new System.Drawing.Size(68, 73);
-            this.Peça2.TabIndex = 0;
-            this.Peça2.Text = "2";
+            this.LBPeça2.AutoSize = true;
+            this.LBPeça2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBPeça2.Location = new System.Drawing.Point(44, 20);
+            this.LBPeça2.Name = "LBPeça2";
+            this.LBPeça2.Size = new System.Drawing.Size(68, 73);
+            this.LBPeça2.TabIndex = 0;
+            this.LBPeça2.Text = "2";
             // 
             // panel2
             // 
@@ -347,7 +347,7 @@
             this.peca1.AllowDrop = true;
             this.peca1.BackColor = System.Drawing.SystemColors.Control;
             this.peca1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.peca1.Controls.Add(this.Peça1);
+            this.peca1.Controls.Add(this.LBPeça1);
             this.peca1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.peca1.Location = new System.Drawing.Point(0, 0);
             this.peca1.Name = "peca1";
@@ -355,19 +355,19 @@
             this.peca1.TabIndex = 11;
             this.peca1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Peca1_MouseDown);
             // 
-            // Peça1
+            // LBPeça1
             // 
-            this.Peça1.AutoSize = true;
-            this.Peça1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Peça1.Location = new System.Drawing.Point(40, 15);
-            this.Peça1.Name = "Peça1";
-            this.Peça1.Size = new System.Drawing.Size(68, 73);
-            this.Peça1.TabIndex = 0;
-            this.Peça1.Text = "1";
+            this.LBPeça1.AutoSize = true;
+            this.LBPeça1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBPeça1.Location = new System.Drawing.Point(40, 15);
+            this.LBPeça1.Name = "LBPeça1";
+            this.LBPeça1.Size = new System.Drawing.Size(68, 73);
+            this.LBPeça1.TabIndex = 0;
+            this.LBPeça1.Text = "1";
             // 
             // btnFechar
             // 
-            this.btnFechar.Location = new System.Drawing.Point(546, 408);
+            this.btnFechar.Location = new System.Drawing.Point(545, 408);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(82, 30);
             this.btnFechar.TabIndex = 1;
@@ -509,11 +509,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel peca3;
-        private System.Windows.Forms.Label Peça3;
+        private System.Windows.Forms.Label LBPeça3;
         private System.Windows.Forms.Panel peca1;
-        private System.Windows.Forms.Label Peça1;
+        private System.Windows.Forms.Label LBPeça1;
         private System.Windows.Forms.Panel peca2;
-        private System.Windows.Forms.Label Peça2;
+        private System.Windows.Forms.Label LBPeça2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel8;
