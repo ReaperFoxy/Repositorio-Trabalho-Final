@@ -1,0 +1,22 @@
+E:\VisualStudio Projects\Trabalho Final\Trabalho Final\bin\Debug\Trabalho Final.exe.config
+E:\VisualStudio Projects\Trabalho Final\Trabalho Final\bin\Debug\Trabalho Final.exe
+E:\VisualStudio Projects\Trabalho Final\Trabalho Final\bin\Debug\Trabalho Final.pdb
+E:\VisualStudio Projects\Trabalho Final\Trabalho Final\obj\Debug\Trabalho Final.csprojAssemblyReference.cache
+E:\VisualStudio Projects\Trabalho Final\Trabalho Final\obj\Debug\Trabalho_Final.Properties.Resources.resources
+E:\VisualStudio Projects\Trabalho Final\Trabalho Final\obj\Debug\Trabalho Final.csproj.GenerateResource.cache
+E:\VisualStudio Projects\Trabalho Final\Trabalho Final\obj\Debug\Trabalho Final.csproj.CoreCompileInputs.cache
+E:\VisualStudio Projects\Trabalho Final\Trabalho Final\obj\Debug\Trabalho Final.exe
+E:\VisualStudio Projects\Trabalho Final\Trabalho Final\obj\Debug\Trabalho Final.pdb
+E:\VisualStudio Projects\Trabalho Final\Trabalho Final\obj\Debug\Trabalho_Final.TelaInicial.resources
+E:\VisualStudio Projects\Trabalho Final\Trabalho Final\obj\Debug\Trabalho_Final.TelaJogo.resources
+E:\VisualStudio Projects\Repositorio-Trabalho-Final\Trabalho Final\bin\Debug\Trabalho Final.exe.config
+E:\VisualStudio Projects\Repositorio-Trabalho-Final\Trabalho Final\bin\Debug\Trabalho Final.exe
+E:\VisualStudio Projects\Repositorio-Trabalho-Final\Trabalho Final\bin\Debug\Trabalho Final.pdb
+E:\VisualStudio Projects\Repositorio-Trabalho-Final\Trabalho Final\obj\Debug\Trabalho Final.csprojAssemblyReference.cache
+E:\VisualStudio Projects\Repositorio-Trabalho-Final\Trabalho Final\obj\Debug\Trabalho_Final.TelaInicial.resources
+E:\VisualStudio Projects\Repositorio-Trabalho-Final\Trabalho Final\obj\Debug\Trabalho_Final.Properties.Resources.resources
+E:\VisualStudio Projects\Repositorio-Trabalho-Final\Trabalho Final\obj\Debug\Trabalho_Final.TelaJogo.resources
+E:\VisualStudio Projects\Repositorio-Trabalho-Final\Trabalho Final\obj\Debug\Trabalho Final.csproj.GenerateResource.cache
+E:\VisualStudio Projects\Repositorio-Trabalho-Final\Trabalho Final\obj\Debug\Trabalho Final.csproj.CoreCompileInputs.cache
+E:\VisualStudio Projects\Repositorio-Trabalho-Final\Trabalho Final\obj\Debug\Trabalho Final.exe
+E:\VisualStudio Projects\Repositorio-Trabalho-Final\Trabalho Final\obj\Debug\Trabalho Final.pdb
