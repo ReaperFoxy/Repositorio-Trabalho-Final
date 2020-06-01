@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,10 @@ namespace Trabalho_Final
             InitializeComponent();
 
         }
+
+        PilhaPoições pilha = new PilhaPoições();
+
+
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
@@ -52,11 +57,11 @@ namespace Trabalho_Final
 
         private void pnl1_DragEnter(object sender, DragEventArgs e)
         {
+
             if (panel7.Contains(peca1))
                 e.Effect = DragDropEffects.None;
             else if (panel4.Contains(peca1))
-                e.Effect = DragDropEffects.None;
-            //Lembrar limitar o 3
+                e.Effect = DragDropEffects.None;            
             else
                 this.ControlaEfeito(e);
         }
@@ -112,10 +117,17 @@ namespace Trabalho_Final
             this.ControlaEfeito(e);
         }
 
+
         //DragDrop
+
+        
         private void pnl1_DragDrop(object sender, DragEventArgs e)
         {
+
             this.panel1.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+           
+            if (panel1.Contains(peca3))
+                pilha.AddPainel(7);
 
             //Gravidade
             if (panel4.Contains(peca2) == false)
@@ -127,15 +139,22 @@ namespace Trabalho_Final
             if (panel7.Contains(peca3) == true && panel1.Contains(peca2) == true)
                 this.panel4.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
 
-            //Condição Maior/Menor
-            //Se sobrepor peça maior -> cancelar ação
-            if (panel7.Contains(peca1))
-                e.Effect = DragDropEffects.None;
+            //Impedir 3 sobre 2
+            if (panel7.Contains(peca2) && panel4.Contains(peca3))
+            {
+                int UltimoPaineil = pilha.RemoverPainel();
+                MoverPeca3(UltimoPaineil, peca3, e);
+            }
 
         }
         private void pnl2_DragDrop(object sender, DragEventArgs e)
         {
+            
             this.panel2.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+            
+            if (panel2.Contains(peca3))
+                pilha.AddPainel(8);
+
 
             //Gravidade
             if (panel5.Contains(peca2) == false)
@@ -147,11 +166,21 @@ namespace Trabalho_Final
             if (panel8.Contains(peca3) == true && panel2.Contains(peca2) == true)
                 this.panel5.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
 
+            //Impedir 3 sobre 2
+            if (panel8.Contains(peca2) && panel5.Contains(peca3))
+            {
+                int UltimoPaineil = pilha.RemoverPainel();
+                MoverPeca3(UltimoPaineil, peca3, e);
+            }
 
         }
         private void pnl3_DragDrop(object sender, DragEventArgs e)
         {
+
             this.panel3.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+
+            if (panel3.Contains(peca3))
+                pilha.AddPainel(9);
 
             //Gravidade
             if (panel6.Contains(peca2) == false)
@@ -163,51 +192,103 @@ namespace Trabalho_Final
             if (panel9.Contains(peca3) == true && panel3.Contains(peca2) == true)
                 this.panel6.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
 
+            //Impedir 3 sobre 2
+            if (panel9.Contains(peca2) && panel6.Contains(peca3))
+            {
+                int UltimoPaineil = pilha.RemoverPainel();
+                MoverPeca3(UltimoPaineil, peca3, e);
+            }
+
             ChecarVitoria();
         }
         private void pnl4_DragDrop(object sender, DragEventArgs e)
         {
+            
             this.panel4.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+            
+            if (panel4.Contains(peca3))
+                pilha.AddPainel(7);
 
             //Gravidade
             if (panel7.Contains(peca3) == false && panel7.Contains(peca2) == false)
                 this.panel7.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
 
+            //Impedir 3 sobre 2
+            if (panel7.Contains(peca2) && panel4.Contains(peca3))
+            {
+                int UltimoPaineil = pilha.RemoverPainel();
+                MoverPeca3(UltimoPaineil, peca3, e);
+            }
+
         }
         private void pnl5_DragDrop(object sender, DragEventArgs e)
-        {
+        { 
+
             this.panel5.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+
+            if (panel5.Contains(peca3))
+                pilha.AddPainel(8);
 
             //Gravidade
             if (panel8.Contains(peca3) == false && panel8.Contains(peca2) == false)
                 this.panel8.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
 
+            //Impedir 3 sobre 2
+            if (panel8.Contains(peca2) && panel5.Contains(peca3))
+            {
+                int UltimoPaineil = pilha.RemoverPainel();
+                MoverPeca3(UltimoPaineil, peca3, e);
+            }
+
         }
         private void pnl6_DragDrop(object sender, DragEventArgs e)
         {
+
             this.panel6.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+
+            if (panel6.Contains(peca3))
+                pilha.AddPainel(9);
 
             //Gravidade
             if (panel9.Contains(peca3) == false && panel9.Contains(peca2) == false)
                 this.panel9.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+
+            //Impedir 3 sobre 2
+            if (panel9.Contains(peca2) && panel6.Contains(peca3))
+            {
+                int UltimoPaineil = pilha.RemoverPainel();
+                MoverPeca3(UltimoPaineil, peca3, e);
+            }
+
         }
         private void pnl7_DragDrop(object sender, DragEventArgs e)
         {
+
             this.panel7.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
-            
+
+            if (panel7.Contains(peca3))
+                pilha.AddPainel(7);
+
         }
         private void pnl8_DragDrop(object sender, DragEventArgs e)
         {
+
             this.panel8.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
-          
+
+            if (panel8.Contains(peca3))
+                pilha.AddPainel(8);
+
         }
         private void pnl9_DragDrop(object sender, DragEventArgs e)
         {
+           
             this.panel9.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
-            
+
+            if (panel9.Contains(peca3))
+                pilha.AddPainel(9);
         }
 
-
+      
         //Vitoria
         private void ChecarVitoria()
         {
@@ -219,7 +300,69 @@ namespace Trabalho_Final
             }
 
         }
+ 
+        //Mover 3 peça
+        private void MoverPeca3(int UltimoPainel, object sender, DragEventArgs e)
+        {
+            switch (UltimoPainel) {
+                case 1:
+                    this.panel1.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+                    break;
+                case 2:
+                    this.panel2.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+                    break;
+                case 3:
+                    this.panel3.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+                    break;
+                case 4:
+                    this.panel4.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+                    break;
+                case 5:
+                    this.panel5.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+                    break;
+                case 6:
+                    this.panel6.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+                    break;
+                case 7:
+                    this.panel7.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+                    break;
+                case 8:
+                    this.panel8.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+                    break;
+                case 9:
+                    this.panel9.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
+                    break;
 
-        
+            }
+        }
+
     }
+    //Pilhas
+    public class PilhaPoições
+    {
+
+
+        private Stack<int> PilhaPaineis = new Stack<int>();
+        public void AddPainel(int painel)
+        {
+            if (PilhaPaineis.Count == 0)
+                PilhaPaineis.Push(7);
+
+            PilhaPaineis.Push(painel);
+        }
+
+        public int RemoverPainel()
+        {
+            PilhaPaineis.Pop();
+
+            int UltimoPainel = PilhaPaineis.Peek();
+
+            return UltimoPainel;
+        }
+
+       
+
+    }
+
+
 }
