@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
@@ -57,11 +58,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cronometro = new System.Windows.Forms.Label();
+            this.lblSegundos = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.lblMinutos = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.tmrCronometro = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -402,15 +406,15 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Base 3";
             // 
-            // cronometro
+            // lblSegundos
             // 
-            this.cronometro.AutoSize = true;
-            this.cronometro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cronometro.Location = new System.Drawing.Point(557, 55);
-            this.cronometro.Name = "cronometro";
-            this.cronometro.Size = new System.Drawing.Size(54, 20);
-            this.cronometro.TabIndex = 5;
-            this.cronometro.Text = "00:00";
+            this.lblSegundos.AutoSize = true;
+            this.lblSegundos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSegundos.Location = new System.Drawing.Point(580, 27);
+            this.lblSegundos.Name = "lblSegundos";
+            this.lblSegundos.Size = new System.Drawing.Size(29, 20);
+            this.lblSegundos.TabIndex = 5;
+            this.lblSegundos.Text = "00";
             // 
             // label4
             // 
@@ -448,16 +452,44 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "Leve a coluna da base 1 para a base 3 (mantendo a ordem).";
             // 
+            // lblMinutos
+            // 
+            this.lblMinutos.AutoSize = true;
+            this.lblMinutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinutos.Location = new System.Drawing.Point(545, 27);
+            this.lblMinutos.Name = "lblMinutos";
+            this.lblMinutos.Size = new System.Drawing.Size(29, 20);
+            this.lblMinutos.TabIndex = 10;
+            this.lblMinutos.Text = "00";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(571, 27);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(14, 20);
+            this.label17.TabIndex = 11;
+            this.label17.Text = ":";
+            // 
+            // tmrCronometro
+            // 
+            this.tmrCronometro.Enabled = true;
+            this.tmrCronometro.Interval = 1;
+            this.tmrCronometro.Tick += new System.EventHandler(this.tmrCronometro_Tick);
+            // 
             // TelaJogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 450);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.lblMinutos);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.cronometro);
+            this.Controls.Add(this.lblSegundos);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -504,7 +536,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label cronometro;
+        private System.Windows.Forms.Label lblSegundos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -533,5 +565,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblMinutos;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Timer tmrCronometro;
     }
 }

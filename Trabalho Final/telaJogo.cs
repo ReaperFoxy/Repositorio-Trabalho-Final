@@ -8,6 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Trabalho_Final
 {
@@ -16,6 +17,7 @@ namespace Trabalho_Final
         public TelaJogo()
         {
             InitializeComponent();
+            cronometro.Start();
 
         }
 
@@ -36,12 +38,18 @@ namespace Trabalho_Final
         }
         private void Peca2_MouseDown(object sender, MouseEventArgs e)
         {
-            DoDragDrop(peca2, DragDropEffects.Move);
+            if (panel4.Contains(peca2) && panel1.Contains(peca1) || panel5.Contains(peca2) && panel2.Contains(peca1) || panel6.Contains(peca2) && panel3.Contains(peca1) || panel7.Contains(peca2) && panel4.Contains(peca1) || panel8.Contains(peca2) && panel5.Contains(peca1) || panel9.Contains(peca2) && panel6.Contains(peca1))
+                DoDragDrop(peca2, DragDropEffects.None);
+            else
+                DoDragDrop(peca2, DragDropEffects.Move);
 
         }
         private void Peca3_MouseDown(object sender, MouseEventArgs e)
         {
-            DoDragDrop(peca3, DragDropEffects.Move);
+            if (panel7.Contains(peca3) && panel4.Contains(peca2) || panel8.Contains(peca3) && panel5.Contains(peca2) || panel9.Contains(peca3) && panel6.Contains(peca2) || panel7.Contains(peca3) && panel4.Contains(peca1) || panel8.Contains(peca3) && panel5.Contains(peca1) || panel9.Contains(peca3) && panel6.Contains(peca1))
+                DoDragDrop(peca3, DragDropEffects.None);
+            else
+                DoDragDrop(peca3, DragDropEffects.Move);
 
         }
 
@@ -54,7 +62,6 @@ namespace Trabalho_Final
                 e.Effect = DragDropEffects.None;
         }
 
-
         private void pnl1_DragEnter(object sender, DragEventArgs e)
         {
 
@@ -63,6 +70,8 @@ namespace Trabalho_Final
             else if (panel4.Contains(peca1))
                 e.Effect = DragDropEffects.None;            
             else
+
+
                 this.ControlaEfeito(e);
         }
         private void pnl2_DragEnter(object sender, DragEventArgs e)
@@ -119,8 +128,6 @@ namespace Trabalho_Final
 
 
         //DragDrop
-
-        
         private void pnl1_DragDrop(object sender, DragEventArgs e)
         {
 
@@ -145,6 +152,7 @@ namespace Trabalho_Final
                 int UltimoPaineil = pilha.RemoverPainel();
                 MoverPeca3(UltimoPaineil, peca3, e);
             }
+
 
         }
         private void pnl2_DragDrop(object sender, DragEventArgs e)
@@ -296,7 +304,7 @@ namespace Trabalho_Final
             {
                 //Lembrar colocar premios
                 MessageBox.Show("Parabéns! Você ganhou!!");
-
+                cronometro.Stop();
             }
 
         }
@@ -336,11 +344,28 @@ namespace Trabalho_Final
             }
         }
 
+
+        //Cronometro
+        Stopwatch cronometro = new Stopwatch();
+
+        private void tmrCronometro_Tick(object sender, EventArgs e)
+        {
+            if (cronometro.Elapsed.Minutes < 10)
+                lblMinutos.Text = "0" + cronometro.Elapsed.Minutes.ToString();
+            else
+                lblMinutos.Text = cronometro.Elapsed.Minutes.ToString();
+
+            if (cronometro.Elapsed.Seconds < 10)
+                lblSegundos.Text = "0" +cronometro.Elapsed.Seconds.ToString();
+            else
+                lblSegundos.Text = cronometro.Elapsed.Seconds.ToString();
+        }
     }
+
+
     //Pilhas
     public class PilhaPoições
     {
-
 
         private Stack<int> PilhaPaineis = new Stack<int>();
         public void AddPainel(int painel)
