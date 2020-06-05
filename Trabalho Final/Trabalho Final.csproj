@@ -71,6 +71,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="telaJogo.resx">
       <DependentUpon>TelaJogo.cs</DependentUpon>
@@ -87,6 +88,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\ImgBase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\ImgMeio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\ImgTopo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Peça3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Peça1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Peça2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

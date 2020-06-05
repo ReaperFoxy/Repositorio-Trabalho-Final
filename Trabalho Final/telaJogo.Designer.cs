@@ -30,30 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.peca3 = new System.Windows.Forms.Panel();
-            this.LBPeça3 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.peca2 = new System.Windows.Forms.Panel();
-            this.LBPeça2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.peca1 = new System.Windows.Forms.Panel();
-            this.LBPeça1 = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,19 +55,24 @@
             this.lblMinutos = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.tmrCronometro = new System.Windows.Forms.Timer(this.components);
+            this.peca3 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.peca1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.peca3.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.peca2.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.peca1.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -107,30 +101,11 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(502, 363);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // panel9
-            // 
-            this.panel9.AllowDrop = true;
-            this.panel9.Controls.Add(this.label14);
-            this.panel9.Location = new System.Drawing.Point(338, 246);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(157, 111);
-            this.panel9.TabIndex = 19;
-            this.panel9.DragDrop += new System.Windows.Forms.DragEventHandler(this.pnl9_DragDrop);
-            this.panel9.DragEnter += new System.Windows.Forms.DragEventHandler(this.pnl9_DragEnter);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label14.Location = new System.Drawing.Point(0, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(13, 13);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "9";
-            // 
             // panel8
             // 
             this.panel8.AllowDrop = true;
+            this.panel8.BackgroundImage = global::Trabalho_Final.Properties.Resources.ImgBase;
+            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel8.Controls.Add(this.label15);
             this.panel8.Location = new System.Drawing.Point(172, 246);
             this.panel8.Name = "panel8";
@@ -152,6 +127,8 @@
             // panel7
             // 
             this.panel7.AllowDrop = true;
+            this.panel7.BackgroundImage = global::Trabalho_Final.Properties.Resources.ImgBase;
+            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel7.Controls.Add(this.label16);
             this.panel7.Controls.Add(this.peca3);
             this.panel7.Location = new System.Drawing.Point(6, 246);
@@ -171,53 +148,11 @@
             this.label16.TabIndex = 13;
             this.label16.Text = "7";
             // 
-            // peca3
-            // 
-            this.peca3.AllowDrop = true;
-            this.peca3.BackColor = System.Drawing.SystemColors.Control;
-            this.peca3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.peca3.Controls.Add(this.LBPeça3);
-            this.peca3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.peca3.Location = new System.Drawing.Point(0, 0);
-            this.peca3.Name = "peca3";
-            this.peca3.Size = new System.Drawing.Size(157, 111);
-            this.peca3.TabIndex = 9;
-            this.peca3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Peca3_MouseDown);
-            // 
-            // LBPeça3
-            // 
-            this.LBPeça3.AutoSize = true;
-            this.LBPeça3.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBPeça3.Location = new System.Drawing.Point(44, 20);
-            this.LBPeça3.Name = "LBPeça3";
-            this.LBPeça3.Size = new System.Drawing.Size(68, 73);
-            this.LBPeça3.TabIndex = 0;
-            this.LBPeça3.Text = "3";
-            // 
-            // panel6
-            // 
-            this.panel6.AllowDrop = true;
-            this.panel6.Controls.Add(this.label13);
-            this.panel6.Location = new System.Drawing.Point(338, 126);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(157, 111);
-            this.panel6.TabIndex = 16;
-            this.panel6.DragDrop += new System.Windows.Forms.DragEventHandler(this.pnl6_DragDrop);
-            this.panel6.DragEnter += new System.Windows.Forms.DragEventHandler(this.pnl6_DragEnter);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label13.Location = new System.Drawing.Point(0, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(13, 13);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "6";
-            // 
             // panel5
             // 
             this.panel5.AllowDrop = true;
+            this.panel5.BackgroundImage = global::Trabalho_Final.Properties.Resources.ImgMeio;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel5.Controls.Add(this.label12);
             this.panel5.Location = new System.Drawing.Point(172, 126);
             this.panel5.Name = "panel5";
@@ -239,6 +174,8 @@
             // panel4
             // 
             this.panel4.AllowDrop = true;
+            this.panel4.BackgroundImage = global::Trabalho_Final.Properties.Resources.ImgMeio;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.peca2);
             this.panel4.Location = new System.Drawing.Point(6, 126);
@@ -262,8 +199,9 @@
             // 
             this.peca2.AllowDrop = true;
             this.peca2.BackColor = System.Drawing.SystemColors.Control;
+            this.peca2.BackgroundImage = global::Trabalho_Final.Properties.Resources.Peça2;
+            this.peca2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.peca2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.peca2.Controls.Add(this.LBPeça2);
             this.peca2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.peca2.Location = new System.Drawing.Point(0, 0);
             this.peca2.Name = "peca2";
@@ -271,19 +209,11 @@
             this.peca2.TabIndex = 10;
             this.peca2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Peca2_MouseDown);
             // 
-            // LBPeça2
-            // 
-            this.LBPeça2.AutoSize = true;
-            this.LBPeça2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBPeça2.Location = new System.Drawing.Point(44, 20);
-            this.LBPeça2.Name = "LBPeça2";
-            this.LBPeça2.Size = new System.Drawing.Size(68, 73);
-            this.LBPeça2.TabIndex = 0;
-            this.LBPeça2.Text = "2";
-            // 
             // panel2
             // 
             this.panel2.AllowDrop = true;
+            this.panel2.BackgroundImage = global::Trabalho_Final.Properties.Resources.ImgTopo;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.label9);
             this.panel2.Location = new System.Drawing.Point(172, 6);
             this.panel2.Name = "panel2";
@@ -302,30 +232,11 @@
             this.label9.TabIndex = 13;
             this.label9.Text = "2";
             // 
-            // panel3
-            // 
-            this.panel3.AllowDrop = true;
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Location = new System.Drawing.Point(338, 6);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(157, 111);
-            this.panel3.TabIndex = 13;
-            this.panel3.DragDrop += new System.Windows.Forms.DragEventHandler(this.pnl3_DragDrop);
-            this.panel3.DragEnter += new System.Windows.Forms.DragEventHandler(this.pnl3_DragEnter);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label10.Location = new System.Drawing.Point(0, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(13, 13);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "3";
-            // 
             // panel1
             // 
             this.panel1.AllowDrop = true;
+            this.panel1.BackgroundImage = global::Trabalho_Final.Properties.Resources.ImgTopo;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.peca1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -345,29 +256,6 @@
             this.label8.Size = new System.Drawing.Size(13, 13);
             this.label8.TabIndex = 12;
             this.label8.Text = "1";
-            // 
-            // peca1
-            // 
-            this.peca1.AllowDrop = true;
-            this.peca1.BackColor = System.Drawing.SystemColors.Control;
-            this.peca1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.peca1.Controls.Add(this.LBPeça1);
-            this.peca1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.peca1.Location = new System.Drawing.Point(0, 0);
-            this.peca1.Name = "peca1";
-            this.peca1.Size = new System.Drawing.Size(157, 111);
-            this.peca1.TabIndex = 11;
-            this.peca1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Peca1_MouseDown);
-            // 
-            // LBPeça1
-            // 
-            this.LBPeça1.AutoSize = true;
-            this.LBPeça1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBPeça1.Location = new System.Drawing.Point(40, 15);
-            this.LBPeça1.Name = "LBPeça1";
-            this.LBPeça1.Size = new System.Drawing.Size(68, 73);
-            this.LBPeça1.TabIndex = 0;
-            this.LBPeça1.Text = "1";
             // 
             // btnFechar
             // 
@@ -478,6 +366,103 @@
             this.tmrCronometro.Interval = 1;
             this.tmrCronometro.Tick += new System.EventHandler(this.tmrCronometro_Tick);
             // 
+            // peca3
+            // 
+            this.peca3.AllowDrop = true;
+            this.peca3.BackColor = System.Drawing.SystemColors.Control;
+            this.peca3.BackgroundImage = global::Trabalho_Final.Properties.Resources.Peça3;
+            this.peca3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.peca3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.peca3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.peca3.Location = new System.Drawing.Point(0, 0);
+            this.peca3.Name = "peca3";
+            this.peca3.Size = new System.Drawing.Size(157, 111);
+            this.peca3.TabIndex = 9;
+            this.peca3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Peca3_MouseDown);
+            // 
+            // panel9
+            // 
+            this.panel9.AllowDrop = true;
+            this.panel9.BackgroundImage = global::Trabalho_Final.Properties.Resources.ImgBase;
+            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel9.Controls.Add(this.label14);
+            this.panel9.Location = new System.Drawing.Point(338, 246);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(157, 111);
+            this.panel9.TabIndex = 19;
+            this.panel9.DragDrop += new System.Windows.Forms.DragEventHandler(this.pnl9_DragDrop);
+            this.panel9.DragEnter += new System.Windows.Forms.DragEventHandler(this.pnl9_DragEnter);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label14.Location = new System.Drawing.Point(0, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(13, 13);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "9";
+            // 
+            // panel6
+            // 
+            this.panel6.AllowDrop = true;
+            this.panel6.BackgroundImage = global::Trabalho_Final.Properties.Resources.ImgMeio;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel6.Controls.Add(this.label13);
+            this.panel6.Location = new System.Drawing.Point(338, 126);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(157, 111);
+            this.panel6.TabIndex = 16;
+            this.panel6.DragDrop += new System.Windows.Forms.DragEventHandler(this.pnl6_DragDrop);
+            this.panel6.DragEnter += new System.Windows.Forms.DragEventHandler(this.pnl6_DragEnter);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label13.Location = new System.Drawing.Point(0, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(13, 13);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "6";
+            // 
+            // panel3
+            // 
+            this.panel3.AllowDrop = true;
+            this.panel3.BackgroundImage = global::Trabalho_Final.Properties.Resources.ImgTopo;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Location = new System.Drawing.Point(338, 6);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(157, 111);
+            this.panel3.TabIndex = 13;
+            this.panel3.DragDrop += new System.Windows.Forms.DragEventHandler(this.pnl3_DragDrop);
+            this.panel3.DragEnter += new System.Windows.Forms.DragEventHandler(this.pnl3_DragEnter);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label10.Location = new System.Drawing.Point(0, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(13, 13);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "3";
+            // 
+            // peca1
+            // 
+            this.peca1.AllowDrop = true;
+            this.peca1.BackColor = System.Drawing.SystemColors.Control;
+            this.peca1.BackgroundImage = global::Trabalho_Final.Properties.Resources.Peça1;
+            this.peca1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.peca1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.peca1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.peca1.Location = new System.Drawing.Point(0, 0);
+            this.peca1.Name = "peca1";
+            this.peca1.Size = new System.Drawing.Size(157, 111);
+            this.peca1.TabIndex = 11;
+            this.peca1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Peca1_MouseDown);
+            // 
             // TelaJogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -500,30 +485,24 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Teste de Lógica";
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.peca3.ResumeLayout(false);
-            this.peca3.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.peca2.ResumeLayout(false);
-            this.peca2.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.peca1.ResumeLayout(false);
-            this.peca1.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -541,11 +520,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel peca3;
-        private System.Windows.Forms.Label LBPeça3;
         private System.Windows.Forms.Panel peca1;
-        private System.Windows.Forms.Label LBPeça1;
         private System.Windows.Forms.Panel peca2;
-        private System.Windows.Forms.Label LBPeça2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel8;
