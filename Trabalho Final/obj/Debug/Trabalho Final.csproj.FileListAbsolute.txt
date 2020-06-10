@@ -20,3 +20,4 @@ E:\VisualStudio Projects\Repositorio-Trabalho-Final\Trabalho Final\obj\Debug\Tra
 E:\VisualStudio Projects\Repositorio-Trabalho-Final\Trabalho Final\obj\Debug\Trabalho Final.csproj.CoreCompileInputs.cache
 E:\VisualStudio Projects\Repositorio-Trabalho-Final\Trabalho Final\obj\Debug\Trabalho Final.exe
 E:\VisualStudio Projects\Repositorio-Trabalho-Final\Trabalho Final\obj\Debug\Trabalho Final.pdb
+E:\VisualStudio Projects\Repositorio-Trabalho-Final\Trabalho Final\obj\Debug\Trabalho_Final.TelaJogo2.resources

@@ -9,13 +9,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Threading;
 
 namespace Trabalho_Final
 {
     public partial class TelaJogo : Form
     {
+        Thread t2;
+
         public TelaJogo()
         {
+
             InitializeComponent();
             cronometro.Start();
 
@@ -146,14 +150,14 @@ namespace Trabalho_Final
             if (panel7.Contains(peca3) == true && panel1.Contains(peca2) == true)
                 this.panel4.Controls.Add((Panel)e.Data.GetData(typeof(Panel)));
 
-            //Impedir 3 sobre 2
+            //Impedir Sobreposição
+            //3
             if (panel7.Contains(peca2) && panel4.Contains(peca3))
             {
                 int UltimoPaineil = pilha.RemoverPainel();
-                MoverPeca3(UltimoPaineil, peca3, e);
+                MoverPeca(UltimoPaineil, peca3, e);
             }
-
-
+            
         }
         private void pnl2_DragDrop(object sender, DragEventArgs e)
         {
@@ -178,7 +182,7 @@ namespace Trabalho_Final
             if (panel8.Contains(peca2) && panel5.Contains(peca3))
             {
                 int UltimoPaineil = pilha.RemoverPainel();
-                MoverPeca3(UltimoPaineil, peca3, e);
+                MoverPeca(UltimoPaineil, peca3, e);
             }
 
         }
@@ -204,7 +208,7 @@ namespace Trabalho_Final
             if (panel9.Contains(peca2) && panel6.Contains(peca3))
             {
                 int UltimoPaineil = pilha.RemoverPainel();
-                MoverPeca3(UltimoPaineil, peca3, e);
+                MoverPeca(UltimoPaineil, peca3, e);
             }
 
             ChecarVitoria();
@@ -225,7 +229,7 @@ namespace Trabalho_Final
             if (panel7.Contains(peca2) && panel4.Contains(peca3))
             {
                 int UltimoPaineil = pilha.RemoverPainel();
-                MoverPeca3(UltimoPaineil, peca3, e);
+                MoverPeca(UltimoPaineil, peca3, e);
             }
 
         }
@@ -245,7 +249,7 @@ namespace Trabalho_Final
             if (panel8.Contains(peca2) && panel5.Contains(peca3))
             {
                 int UltimoPaineil = pilha.RemoverPainel();
-                MoverPeca3(UltimoPaineil, peca3, e);
+                MoverPeca(UltimoPaineil, peca3, e);
             }
 
         }
@@ -265,7 +269,7 @@ namespace Trabalho_Final
             if (panel9.Contains(peca2) && panel6.Contains(peca3))
             {
                 int UltimoPaineil = pilha.RemoverPainel();
-                MoverPeca3(UltimoPaineil, peca3, e);
+                MoverPeca(UltimoPaineil, peca3, e);
             }
 
         }
@@ -286,7 +290,7 @@ namespace Trabalho_Final
             if (panel8.Contains(peca3))
                 pilha.AddPainel(8);
 
-        }
+        }      
         private void pnl9_DragDrop(object sender, DragEventArgs e)
         {
            
@@ -296,21 +300,29 @@ namespace Trabalho_Final
                 pilha.AddPainel(9);
         }
 
-      
+
         //Vitoria
         private void ChecarVitoria()
         {
             if (panel3.Contains(peca1) && panel6.Contains(peca2) && panel9.Contains(peca3))
             {
-                //Lembrar colocar premios
-                MessageBox.Show("Parabéns! Você ganhou!!");
                 cronometro.Stop();
+                MessageBox.Show("Parabéns! Você ganhou!!");
+                
+                this.Close();
+                t2 = new Thread(abrirJanela);
+                t2.SetApartmentState(ApartmentState.STA);
+                t2.Start();
             }
+        }
 
+        private void abrirJanela(object obj)
+        {
+                Application.Run(new TelaJogo2());
         }
  
-        //Mover 3 peça
-        private void MoverPeca3(int UltimoPainel, object sender, DragEventArgs e)
+        //Mover peça
+        private void MoverPeca(int UltimoPainel, object sender, DragEventArgs e)
         {
             switch (UltimoPainel) {
                 case 1:
