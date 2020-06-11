@@ -412,8 +412,7 @@ namespace Trabalho_Final
         }
 
 
-
-        //Vitoria
+    //Vitoria
         private void ChecarVitoria()
         {
             if (panel3.Contains(peca1) && panel6.Contains(peca2) && panel9.Contains(peca3))
