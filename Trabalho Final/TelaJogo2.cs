@@ -29,29 +29,32 @@ namespace Trabalho_Final
         }
         private void Peca2_MouseDown(object sender, MouseEventArgs e)
         {
-            if (panel4.Contains(peca2) && panel1.Contains(peca1) || panel5.Contains(peca2) && panel2.Contains(peca1) || panel6.Contains(peca2) && panel3.Contains(peca1) || panel7.Contains(peca2) && panel4.Contains(peca1) || panel8.Contains(peca2) && panel5.Contains(peca1) || panel9.Contains(peca2) && panel6.Contains(peca1))
+            if (panel4.Contains(peca2) && panel1.Contains(peca1) || panel5.Contains(peca2) && panel2.Contains(peca1) || panel6.Contains(peca2) && panel3.Contains(peca1) || panel7.Contains(peca2) && panel4.Contains(peca1) || panel8.Contains(peca2) && panel5.Contains(peca1) || panel9.Contains(peca2) && panel6.Contains(peca1) || panel10.Contains(peca2) && panel7.Contains(peca1) || panel11.Contains(peca2) && panel8.Contains(peca1) || panel12.Contains(peca2) && panel9.Contains(peca1) || panel13.Contains(peca2) && panel10.Contains(peca1) || panel14.Contains(peca2) && panel11.Contains(peca1) || panel15.Contains(peca2) && panel12.Contains(peca1))
                 DoDragDrop(peca2, DragDropEffects.None);
             else
                 DoDragDrop(peca2, DragDropEffects.Move);
-
         }
         private void Peca3_MouseDown(object sender, MouseEventArgs e)
         {
-            if (panel7.Contains(peca3) && panel4.Contains(peca2) || panel8.Contains(peca3) && panel5.Contains(peca2) || panel9.Contains(peca3) && panel6.Contains(peca2) || panel7.Contains(peca3) && panel4.Contains(peca1) || panel8.Contains(peca3) && panel5.Contains(peca1) || panel9.Contains(peca3) && panel6.Contains(peca1))
+            if ((panel7.Contains(peca3) && (panel4.Contains(peca2) || panel4.Contains(peca1))) || (panel8.Contains(peca3) && (panel5.Contains(peca2) || panel5.Contains(peca1))) || (panel9.Contains(peca3) && (panel6.Contains(peca2) || panel6.Contains(peca1))) || (panel10.Contains(peca3) && (panel7.Contains(peca2) || panel7.Contains(peca1))) || (panel11.Contains(peca3) && (panel8.Contains(peca2) || panel8.Contains(peca1))) || (panel12.Contains(peca3) && (panel9.Contains(peca2) || panel9.Contains(peca1))) || (panel13.Contains(peca3) && (panel10.Contains(peca2) || panel10.Contains(peca1))) || (panel14.Contains(peca3) && (panel11.Contains(peca2) || panel11.Contains(peca1))) || (panel15.Contains(peca3) && (panel12.Contains(peca2) || panel12.Contains(peca1))))
                 DoDragDrop(peca3, DragDropEffects.None);
             else
                 DoDragDrop(peca3, DragDropEffects.Move);
-
         }
         private void Peca4_MouseDown(object sender, MouseEventArgs e)
         {
-            DoDragDrop(peca4, DragDropEffects.Move);
-
+            if ((panel10.Contains(peca4) && (panel7.Contains(peca3) ||  panel7.Contains(peca2) || panel7.Contains(peca1))) || (panel11.Contains(peca4) && (panel8.Contains(peca3) || panel8.Contains(peca2) || panel8.Contains(peca1))) || (panel12.Contains(peca4) && (panel9.Contains(peca3) || panel9.Contains(peca2) || panel9.Contains(peca1))) || (panel13.Contains(peca4) && (panel10.Contains(peca3) || panel10.Contains(peca2) || panel10.Contains(peca1))) || (panel14.Contains(peca4) && (panel11.Contains(peca3) || panel11.Contains(peca2) || panel11.Contains(peca1))) || (panel15.Contains(peca4) && (panel12.Contains(peca3) || panel12.Contains(peca2) || panel12.Contains(peca1))))
+                DoDragDrop(peca4, DragDropEffects.None);
+            else
+                DoDragDrop(peca4, DragDropEffects.Move);
         }
         private void Peca5_MouseDown(object sender, MouseEventArgs e)
         {
-            DoDragDrop(peca5, DragDropEffects.Move);
 
+            if ((panel13.Contains(peca5) && (panel10.Contains(peca4) || panel10.Contains(peca3) || panel10.Contains(peca2) || panel10.Contains(peca1)))  ||  (panel14.Contains(peca5) && (panel11.Contains(peca4) || panel11.Contains(peca3) || panel11.Contains(peca2) || panel11.Contains(peca1)))  ||  (panel15.Contains(peca5) && (panel12.Contains(peca4) || panel12.Contains(peca3) || panel12.Contains(peca2) || panel12.Contains(peca1))))
+                DoDragDrop(peca5, DragDropEffects.None);
+            else
+                DoDragDrop(peca5, DragDropEffects.Move);
         }
 
         //DragEnter
@@ -63,92 +66,88 @@ namespace Trabalho_Final
                 e.Effect = DragDropEffects.None;
         }
 
-        private void pnl1_DragEnter(object sender, DragEventArgs e)
+        private void ImpedirSobrepor1Coluna1(DragEventArgs e)
         {
-
-            if (panel7.Contains(peca1))
-                e.Effect = DragDropEffects.None;
-            else if (panel4.Contains(peca1))
+            if (panel4.Contains(peca1) || panel7.Contains(peca1) || panel10.Contains(peca1) || panel13.Contains(peca1))
                 e.Effect = DragDropEffects.None;
             else
-
-
                 this.ControlaEfeito(e);
+        }
+        private void ImpedirSobrepor1Coluna2(DragEventArgs e)
+        {
+            if (panel5.Contains(peca1) || panel8.Contains(peca1) || panel11.Contains(peca1) || panel14.Contains(peca1))
+                e.Effect = DragDropEffects.None;
+            else
+                this.ControlaEfeito(e);
+        }
+        private void ImpedirSobrepor1Coluna3(DragEventArgs e)
+        {
+            if (panel6.Contains(peca1) || panel9.Contains(peca1) || panel12.Contains(peca1) || panel15.Contains(peca1))
+                e.Effect = DragDropEffects.None;
+            else
+                this.ControlaEfeito(e);
+        }
+
+        private void pnl1_DragEnter(object sender, DragEventArgs e)
+        {
+            ImpedirSobrepor1Coluna1(e);
+           
         }
         private void pnl2_DragEnter(object sender, DragEventArgs e)
         {
-            if (panel8.Contains(peca1))
-                e.Effect = DragDropEffects.None;
-            else if (panel5.Contains(peca1))
-                e.Effect = DragDropEffects.None;
-            else
-                this.ControlaEfeito(e);
+            ImpedirSobrepor1Coluna2(e);
         }
         private void pnl3_DragEnter(object sender, DragEventArgs e)
         {
-            if (panel9.Contains(peca1))
-                e.Effect = DragDropEffects.None;
-            else if (panel6.Contains(peca1))
-                e.Effect = DragDropEffects.None;
-            else
-                this.ControlaEfeito(e);
+            ImpedirSobrepor1Coluna3(e);
         }
         private void pnl4_DragEnter(object sender, DragEventArgs e)
         {
-            if (panel7.Contains(peca1))
-                e.Effect = DragDropEffects.None;
-            else
-                this.ControlaEfeito(e);
+            ImpedirSobrepor1Coluna1(e);
         }
         private void pnl5_DragEnter(object sender, DragEventArgs e)
         {
-            if (panel8.Contains(peca1))
-                e.Effect = DragDropEffects.None;
-            else
-                this.ControlaEfeito(e);
+            ImpedirSobrepor1Coluna2(e);
         }
         private void pnl6_DragEnter(object sender, DragEventArgs e)
         {
-            if (panel9.Contains(peca1))
-                e.Effect = DragDropEffects.None;
-            else
-                this.ControlaEfeito(e);
+            ImpedirSobrepor1Coluna3(e);
         }
         private void pnl7_DragEnter(object sender, DragEventArgs e)
         {
-            this.ControlaEfeito(e);
+            ImpedirSobrepor1Coluna1(e);
         }
         private void pnl8_DragEnter(object sender, DragEventArgs e)
         {
-            this.ControlaEfeito(e);
+            ImpedirSobrepor1Coluna2(e);
         }
         private void pnl9_DragEnter(object sender, DragEventArgs e)
         {
-            this.ControlaEfeito(e);
+            ImpedirSobrepor1Coluna3(e);
         }
         private void pnl10_DragEnter(object sender, DragEventArgs e)
         {
-            this.ControlaEfeito(e);
+            ImpedirSobrepor1Coluna1(e);
         }
         private void pnl11_DragEnter(object sender, DragEventArgs e)
         {
-            this.ControlaEfeito(e);
+            ImpedirSobrepor1Coluna2(e);
         }
         private void pnl12_DragEnter(object sender, DragEventArgs e)
         {
-            this.ControlaEfeito(e);
+            ImpedirSobrepor1Coluna3(e);
         }
         private void pnl13_DragEnter(object sender, DragEventArgs e)
         {
-            this.ControlaEfeito(e);
+            ImpedirSobrepor1Coluna1(e);
         }
         private void pnl14_DragEnter(object sender, DragEventArgs e)
         {
-            this.ControlaEfeito(e);
+            ImpedirSobrepor1Coluna2(e);
         }
         private void pnl15_DragEnter(object sender, DragEventArgs e)
         {
-            this.ControlaEfeito(e);
+            ImpedirSobrepor1Coluna3(e);
         }
 
 
@@ -420,7 +419,7 @@ namespace Trabalho_Final
             if (panel3.Contains(peca1) && panel6.Contains(peca2) && panel9.Contains(peca3))
             {
                 cronometro.Stop();
-                MessageBox.Show("Parabéns! Você ganhou!!");
+                MessageBox.Show("Parabéns! Você ganhou em " + cronometro.Elapsed.Minutes.ToString() + " minutos e " + cronometro.Elapsed.Seconds.ToString() + " segundos!! Fim de jogo.");
               
             }
         }
@@ -501,7 +500,7 @@ namespace Trabalho_Final
                 lblSegundos.Text = cronometro.Elapsed.Seconds.ToString();
         }
 
-        //Impedir sobrepoisção 
+        //Impedir sobrepoisção (3, 4 e 5)
         private void ImpedirSobreposiçãoColuna1(DragEventArgs e)
         {
 

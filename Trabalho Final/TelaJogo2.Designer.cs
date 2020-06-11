@@ -47,13 +47,11 @@
             this.label22 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.peca5 = new System.Windows.Forms.Panel();
-            this.label25 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.peca4 = new System.Windows.Forms.Panel();
-            this.label24 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
@@ -79,15 +77,12 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.tmrCronometro = new System.Windows.Forms.Timer(this.components);
-            this.Coordenadas = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
-            this.peca5.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.peca4.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -299,25 +294,15 @@
             // 
             this.peca5.AllowDrop = true;
             this.peca5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.peca5.BackgroundImage = global::Trabalho_Final.Properties.Resources.Peça5;
             this.peca5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.peca5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.peca5.Controls.Add(this.label25);
             this.peca5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.peca5.Location = new System.Drawing.Point(0, 0);
             this.peca5.Name = "peca5";
             this.peca5.Size = new System.Drawing.Size(157, 109);
             this.peca5.TabIndex = 10;
             this.peca5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Peca5_MouseDown);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(36, 8);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(83, 91);
-            this.label25.TabIndex = 2;
-            this.label25.Text = "5";
             // 
             // label21
             // 
@@ -369,25 +354,15 @@
             // 
             this.peca4.AllowDrop = true;
             this.peca4.BackColor = System.Drawing.Color.Purple;
+            this.peca4.BackgroundImage = global::Trabalho_Final.Properties.Resources.Peça4;
             this.peca4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.peca4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.peca4.Controls.Add(this.label24);
             this.peca4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.peca4.Location = new System.Drawing.Point(0, 0);
             this.peca4.Name = "peca4";
             this.peca4.Size = new System.Drawing.Size(157, 109);
             this.peca4.TabIndex = 10;
             this.peca4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Peca4_MouseDown);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(39, 8);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(83, 91);
-            this.label24.TabIndex = 2;
-            this.label24.Text = "4";
             // 
             // label18
             // 
@@ -670,21 +645,11 @@
             this.tmrCronometro.Interval = 1;
             this.tmrCronometro.Tick += new System.EventHandler(this.tmrCronometro_Tick);
             // 
-            // Coordenadas
-            // 
-            this.Coordenadas.FormattingEnabled = true;
-            this.Coordenadas.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.Coordenadas.Location = new System.Drawing.Point(527, 240);
-            this.Coordenadas.Name = "Coordenadas";
-            this.Coordenadas.Size = new System.Drawing.Size(89, 329);
-            this.Coordenadas.TabIndex = 24;
-            // 
             // TelaJogo2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 671);
-            this.Controls.Add(this.Coordenadas);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.lblMinutos);
             this.Controls.Add(this.label7);
@@ -700,7 +665,7 @@
             this.MaximizeBox = false;
             this.Name = "TelaJogo2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Teste de Lógica";
+            this.Text = "Teste de Lógica - Fase 2";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
@@ -708,14 +673,10 @@
             this.panel14.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
-            this.peca5.ResumeLayout(false);
-            this.peca5.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            this.peca4.ResumeLayout(false);
-            this.peca4.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -790,9 +751,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Timer tmrCronometro;
-        public System.Windows.Forms.ListBox Coordenadas;
     }
 }

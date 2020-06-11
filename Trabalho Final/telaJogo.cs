@@ -307,7 +307,7 @@ namespace Trabalho_Final
             if (panel3.Contains(peca1) && panel6.Contains(peca2) && panel9.Contains(peca3))
             {
                 cronometro.Stop();
-                MessageBox.Show("Parabéns! Você ganhou!!");
+                MessageBox.Show("Parabéns! Você ganhou em " + cronometro.Elapsed.Minutes.ToString() + " minutos e " + cronometro.Elapsed.Seconds.ToString() + " segundos!! Indo para o próximo nível.");
                 
                 this.Close();
                 t2 = new Thread(abrirJanela);
